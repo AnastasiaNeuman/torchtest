@@ -117,3 +117,6 @@ for t in range(epochs):
     test(test_dataloader, model, loss_fn)
 print("Done!")
 
+#saving model -  serialize the internal state dictionary that contains the model parameters
+torch.save(model.state_dict(), "model.pth")
+print("Saved PyTorch Model State to model.pth")
